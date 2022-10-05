@@ -36,17 +36,17 @@ Console.WriteLine($"Количество чисел больше 0 = {posNumbers
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-Console.WriteLine("Введите значение b1: ");
-float b1 = float.Parse(Console.ReadLine()!);
-
-Console.WriteLine("Введите значение k1: "); 
+Console.WriteLine("Введите значение k1: ");
 float k1 = float.Parse(Console.ReadLine()!);
 
-Console.WriteLine("Введите значение b2: "); 
-float b2 = float.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите значение b1: "); 
+float b1 = float.Parse(Console.ReadLine()!);
 
 Console.WriteLine("Введите значение k2: "); 
 float k2 = float.Parse(Console.ReadLine()!);
+
+Console.WriteLine("Введите значение b2: "); 
+float b2 = float.Parse(Console.ReadLine()!);
  
 float x = 0; 
 float y = 0;
@@ -54,4 +54,10 @@ float y = 0;
 x = (b2 - b1) / (k1 - k2);
 y = k1 * x + b1;
 
-Console.WriteLine($"Координаты точки пересечения прямых ({x},{y})");
+if (k1 == k2) 
+{
+    Console.WriteLine($"Прямые y = {k1}x + {b1} и y = {k2}x + {b2} параллельны и не имеют точки пересечения");
+}
+else {
+Console.WriteLine($"Координаты точки пересечения прямых y = {k1}x + {b1} и y = {k2}x + {b2}: ({x}; {y})");
+}
